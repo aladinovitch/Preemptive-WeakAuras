@@ -4,8 +4,6 @@ This WeakAura (WA) is designed for competitive Marksmanship (MM) Hunters in WotL
 
 **This is a single-target focused tool, optimized for Boss Encounters and Arena PvP.**
 
----
-
 ## 🔑 Core Features & Innovations
 
 | Feature | Description | Benefit |
@@ -14,23 +12,21 @@ This WeakAura (WA) is designed for competitive Marksmanship (MM) Hunters in WotL
 | **Auto PvE Filter** | Automatically removes **Arcane Shot** from the rotation when equipped with **BIS** gear, maintaining mana efficiency. | Smartly adapts to your gear to prevent wasted GCDs and mana. |
 | **PvP Tactical Advantage** | Integrated range checker specifically maintains the **6-yard advantage** (41-35 yards). | Helps you avoid critical enemy CC like **Death Grip**, **Polymorph**, and **Fear**. |
 
----
-
 ## ⚠️ Design Focus & Limitation
 
 This WA is strictly optimized for **single-target encounters** (Boss Fights, Arena).
 
 **Rationale:** The logic is designed for maximizing the highest single-target priority system. It does **not** contain logic for AoE (Area of Effect) trash pulls or multi-dotting scenarios, ensuring the core preemptive timing is never compromised by ambiguity.
 
----
-
 ## 📸 Live Demonstration: Preemptive Cue
+
 https://github.com/user-attachments/assets/45e8eabb-5b91-431c-be5e-0536e87f3e53
 
-### Visual Breakdown: Key Elements
+**Visual Breakdown: Key Elements**
+
 ![MM hunter rotation details](https://github.com/user-attachments/assets/1471d0c1-4bd4-4776-b015-40d1b5ec4b3a)
 
-### 📥 Installation and Setup
+## 📥 Installation and Setup
 
 Copy the entire block below and paste it into the WeakAuras `/wa` import screen:
 
