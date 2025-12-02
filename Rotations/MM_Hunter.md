@@ -24,8 +24,8 @@ This WA is strictly optimized for **single-target encounters** (Boss Fights, Are
 
 ---
 
-### 📸 Live Demonstration: Preemptive Cue (GIF)
-![MM hunter rotation](https://github.com/user-attachments/assets/00d9991f-0e65-474a-a2bf-213f1d2b2f0d)
+### 📸 Live Demonstration: Preemptive Cue
+https://github.com/user-attachments/assets/45e8eabb-5b91-431c-be5e-0536e87f3e53
 
 ### Visual Breakdown: Key Elements
 ![MM hunter rotation details](https://github.com/user-attachments/assets/1471d0c1-4bd4-4776-b015-40d1b5ec4b3a)
