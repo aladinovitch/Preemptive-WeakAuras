@@ -169,3 +169,13 @@ Copy the entire block below and paste it into the s `/wa` import screen:
 ## 🐛 Known Issues & Support
 Please report any bugs or unexpected behavior using the **Issues** tab on the main repository page.
 
+---
+
+## ☕ Supporting the Developer
+
+If this WeakAuras collection provides value to your BG, Arena or Raid experience, please consider supporting its continued development and maintenance.
+
+This project is a passion project built in my free time. Your support is greatly appreciated and helps fund future updates and new rotation WAs!
+
+**To view funding options, please click the prominent "Sponsor" button on this repository page.**
+
