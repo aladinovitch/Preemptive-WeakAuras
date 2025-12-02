@@ -1,6 +1,6 @@
 # 🎯 Overview: The MM Hunter Preemptive Rotation Assistant
 
-This WeakAura (WA) is designed for competitive Marksmanship (MM) Hunters in WotLK, moving beyond simple cooldown (CD) tracking. It analyzes your current combat state and equipment to **calculate and display your next optimal spell 2 seconds before it becomes available**. This unique preemptive cue allows you to execute your rotation with zero latency and maximize sustained output.
+This WeakAuras (WA) is designed for competitive Marksmanship (MM) Hunters in WotLK, moving beyond simple cooldown (CD) tracking. It analyzes your current combat state and equipment to **calculate and display your next optimal spell 2 seconds before it becomes available**. This unique preemptive cue allows you to execute your rotation with zero latency and maximize sustained output.
 
 **This is a single-target focused tool, optimized for Boss Encounters and Arena PvP.**
 
