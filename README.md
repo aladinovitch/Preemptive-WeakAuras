@@ -52,7 +52,8 @@ Copy the entire block below and paste it into the WeakAuras `/wa` import screen:
 ---
 
 # 🔮 Shadow Priest Rotation
-This section outlines the WeakAuras (WA) string and documentation for the single-target, calculated rotation tool for Shadow Priests in WotLK for PvP / PvE.
+
+This section outlines the documentation and WeakAuras (WA) string for the single-target rotation tool designed for Shadow Priests in WotLK (PvP/PvE). It comes complete with the **preemptive 2-second** cue, displaying the next spell before it becomes available.
 
 ## 🔑 Design Philosophy & Core Automation
 This WA is built on the premise of **preemptive sequencing** and **dynamic gear-based optimization**, moving beyond simple DoT tracking to identify peak burst windows.
