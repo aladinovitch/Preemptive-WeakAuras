@@ -1,15 +1,170 @@
-# Preemptive-WeakAuras
-WotLK WeakAuras optimal single target rotation.
+# Preemptive WeakAuras
+This repository contains a suite of WeakAuras designed for optimal, preemptive single-target execution for particular WotLK specs.
 
 **Creator:** Aladine TK
 
 ---
 
-This repository contains a collection of WeakAuras designed for optimal single-target execution in WotLK PvP and PvE, using a unique **2-second preemptive cue** to enable flawless spell sequencing.
+## 📜 Table of Contents
 
-| Class / Spec | Focus | Status | Details & Import String |
-| :--- | :--- | :--- | :--- |
-| **Hunter (Marksmanship)** | Single-Target (Boss/Arena) | Stable | [View Hunter MM Details](./Rotations/MM_Hunter.md) |
-| **Priest (Shadow)** | Single-Target (PvP/PvE) | Beta | [View Shadow Priest Details](./Rotations/SPriest.md) |
-| **Death Knight (Blood)** | Single-Target Tanking | Beta | [View Blood DK Details](./Rotations/BloodDK_Tank.md) |
+* 🏹 [Marksmanship Hunter Rotation](#-marksmanship-hunter-rotation)
+* 🔮 [Shadow Priest Rotation](#-shadow-priest-rotation)
+* 🩸 [Blood Death Knight Tank Rotation](#-blood-death-knight-tank-rotation)
+
 ---
+
+# 🏹 Marksmanship Hunter Rotation
+
+This WeakAuras (WA) section is designed for competitive Marksmanship (MM) Hunters in WotLK for PvP / PvE, moving beyond simple cooldown (CD) tracking. It analyzes your current combat state and equipment to **calculate and display your next optimal spell 2 seconds before it becomes available**. This unique preemptive cue allows you to execute your rotation with zero latency and maximize sustained output.
+
+**This is a single-target focused tool, optimized for Boss Encounters and Arena PvP.**
+
+## 🔑 Core Features & Innovations
+
+| Feature | Description | Benefit |
+| :--- | :--- | :--- |
+| **2-Second Preempt** | Displays the optimal next spell 2 seconds *before* the current ability finishes its GCD or cast. | Ensures **flawless, non-stop rotation** and maximizes performance uptime. |
+| **Auto PvE Filter** | Automatically removes **Arcane Shot** from the rotation when equipped with **BIS** gear, maintaining mana efficiency. | Smartly adapts to your gear to prevent wasted GCDs and mana. |
+| **PvP Tactical Advantage** | Integrated range checker specifically maintains the **6-yard advantage** (41-35 yards). | Helps you avoid critical enemy CC like **Death Grip**, **Polymorph**, and **Fear**. |
+
+## ⚠️ Design Focus & Limitation
+
+This WA is strictly optimized for **single-target encounters** (Boss Fights, Arena).
+
+**Rationale:** The logic is designed for maximizing the highest single-target priority system. It does **not** contain logic for AoE (Area of Effect) trash pulls or multi-dotting scenarios, ensuring the core preemptive timing is never compromised by ambiguity.
+
+## 📺 Demonstration
+
+https://github.com/user-attachments/assets/45e8eabb-5b91-431c-be5e-0536e87f3e53
+
+### 📸 Annotated WA Layout
+
+![MM hunter rotation details](https://github.com/user-attachments/assets/1471d0c1-4bd4-4776-b015-40d1b5ec4b3a)
+
+## 📥 Installation and Setup
+
+Copy the entire block below and paste it into the WeakAuras `/wa` import screen:
+
+```lua
+!WA:2!nVvFWXXz59S(IXjxcXwYXIy5K4ZkjY2jX2sNKSfHyc3jDYs26lF6KDItc6272v3Uw3T76D3twYDGelscciqbbe(ieGEaMWhjqoOHecLHQ)agkdtERAz61PDAlQmqNoDyg8mq7meA7ZZZ77U3h6KSWjEALNrAV9E)(93ZVNFppVVw6en6uSR9hUT9FOqrvDLBmxJknQm)oxkLC6PuSnT6XmRP9rdeiWObAB)Dz1yAtdxBZSzvv6rtpRITQXPIp2z1nYuiUSrg1E0utp1c9N3Wv1oup9UO4Pu5NCsNcIpm0qHwoLPTIQDurNyTLOz1p35KTvcLW0mRRUvCN0YzvduW1m90Q2o6MgxZ0pukET0SNDeO5uD)XfSvZaFvIzTuJNX2mVvbEjgt)CQBS4K2Y5uhZ1w2voqr(xWNnsssbSNH3gsIQetjJQvdJDM8Y2QH6lF2SHoPMomALt7c9GZbJ74kB7gmQUHUBWutc)Xrl4CU26zYaJVMB1w84tuqrfNT4yYU)ydoAFJpyuxCakN3wo8CowQzZoGItWLDYNsDAvd3XGsRptXj6jYyjMySerINiAEOtszLvEwv74gWKWjyCQOP6xvoRRMFvh1wfQA8Xgn2GdUaS4YhcblkBKwZ0EutDOk9eB4eXIFrDCP3qo7j4RMp3sY5DHYmIfn9cUGJA2jPkW2xl6kP4Bvf1nM00oNmwMMkcpMwng2VojJlN1stoWf59uF4knoJtnwpXJfB4f5RP8v4RnCEDLINP9C56Dk7Ji3D2fKn05T5bz3uFSDg1W0qDrvzhCZs1iJR2MwsbwSWsmbU0z7OcWofN5WYGDd7TfnNSUbux2BJDVBIDy2BNDFWJnx7BkaRuXjmItWuqBmPEMGfW2sNpTJM1uwPVOoaEPP45YdiVGrHDO0nX6ly80zLDCWNs5cyrdx8rboAadyIfOX0F(MM)GrbK3zJ27iNCywG7mfzfOSWqWWlKMSHc7AzbtzbGkyLTD2nST5YyRRGZHwI3R1wC0GVrHw(ge2rZQvysa61JUD6SQjT2sEh1i8Tsv7XbmHg7TalzbznhKT9GSD0CRSB(jy3c7wHzDi2UcYAHDBSBNDhS9YUt2Uz7H1Aq2DfSyAZS5ZzmMLCA1aS9)CS2cNyKrHnq9mgS9nhm45Ff8KlTMlXIeCbz70ds7fpwtPSLv0Z78yxpR3(ydGRcSJq)UF63XOflhSn2iBd(ufSde0MVrRMKDp0onSVGBpE7wVJv8MMxXBUUafsRIqrAjBW4S3SgBBSMyBErLzbld90KzpRHnUKCLlulmCKHIn6GrseJ1DXrgzCJXpv)Nm89RSGJRQveJmzv3z8S650DVowNbwgaeG1THBFGXUPDQ4r6DGXhBoyXFqSiASdDTSJgGD9adeyAWU6fWTWtQR4QDDSgdW6IDWOoM2UWOnAq2n(KBGD3S9X2kXYW6jilCqBO1rdtP53DbDOZgZmpyjDZxf7gLkkRC68WGszi5z2q5pOBSb2niHn0IPbcrfZZAGeu1S)FdW()lclx3oTXV7IepCOe65uTjiacf2vqCImbcftspHCljbKru8vWwlcxjm0Df0QbKTBA1eCEKHmvu)6xfGyU4uQWQgAx4ghriAS2y7d45CKDrZuyyf5EAITZLaJn0TbULyOmFlw7YvDg3jOFXPrMa(hm6MWYwnTosdfWA7ROmoIhyVnRBF1AGSQzKtp7etM100wZAlujaBjyDQmd)f51tFgv(M15RBZLspZeg5ZLs1w8oRgIKkLT606WeBy6lCkqvjTNNWawnwrh(ac)ilrV7Sa9WjTLTM7KIhws0DgUKhHrgpXGdmCmRMRZqXswzICYZ0q5QG(X2UazF)I(PUZcfy9mNC2kxyBQ(9qY6SIBjEioU2QSmFY55piAKXtmI1wPxc(mmrM700cA0iWhTU1vBpI)jjXW3BzArQKimxFYzz7RoJgVhyVF2oTbif(Dl4VKyTL(S1pxOJNxwbDShkrIQ2n8wLwWVzB5oCS2XQTAdi8OzvN0ToqvRvavV9vRmvJgV1vRyIfKf5lityHRUwnmWWdhl(erhjrIrgk(ahP)ew7D1AabL3eUA2QoAaTWM4RMtddWuzv1QtnDxTA(lxktwZZ2NT6zYRAKE2rV622F4U4l44xSi(REfoHdmh(je)UuQ8UUMgJaAYa1jfWxZ9sSTI4ZEBYlGFWx5yGfbENJ49gnQKE7t0OiHME6PmuDCcqvCms6xu8rn6fdQdFzduVfLRamLMQEgn3DTgEK4EpfeQe)QwTVs3qJT5OiJm4LyVt1x3zot8o7wFKlF3vHdwur3bvUna0QBa8bg9CMM5KIxM8W3pYqOZJode)SOT0Uq3iG)dBDduVl4YCe2vZ(2jbhiZ55bi5Yw2MzGnqhUdK78MVQnmFRStdosoqq2uBGL1ZPblxsSU16GGzuHBbMzsMf6iGDg27q4aG5q89SVh20IvHAKy9oU0IUy5foeytpFlSpJeBgGk)wwj0C)T1wB(C9SZXDy(NCE2tRXE38LQhrI9OSZZMJ9EypwdShF7SNqI9EdWMxJ9(a2Hpa7jzFq2hI9NkX(WsSpcmTxa5myFu2hJ9XzFs2NI9usSpby)ZMvJD2aSpDa2ZW(SS)SnX(8ASp3M(LScEOE2xG9v1yFj2fyF5TXEwj2xH39FXaSVMe751ypxa2xpa7B0a7BQXEbc0fBfGoomSOg7BbGk23M2)Urj2RKu4ZE7KB7VJe7LQggmmQAOtsgbci6U4d40ZO97OCS9UNJX(UjzV8UyGeeshb62D(2aVRUzblc27j1zLZyoqVlymDh9FWUptFkI22ddMazoVdWLcjkDPQ8xbGgaOyfQIIwF6kRTKgSxmZHLyClfWRiB3HZBN1AhAUUwo3Zboaok2VU5b8hghO9Q1PSFag(7iy4UlsdLquyIiO0oVbfjtu01YYO(e5uGyQuO2JKXj1jHBVT2qK6TdYWTZO6sy4DfCbSWubqq8CEbm0y7ltVCctWBRmiNRL79WC0Dtq))QWi5xIJKcKOikAknCCSeuAuOj)vn3yBK(zOcObcVdTAaRtvLdTGOXbiMEAqWEtv9T(dHMB5DlgdbH(FsALaB6DBDJOyvy1qgJZu1wh8kM2blkFPW1fKtjdu7KPk3(0Ah1DlZ3N5(FU58eHWoFu0LzHyZyHSgNvEwBrW0byrAMmqz9(elHDfgLPnmQZPXH20Sc3AS1QMGT1uo6O(5u9pogxjRVMsnA8bInwc(cbfZus7Zbr0bb5UbR9vNbRhGSoQwG9EKzlLEolqrT1ERtTr9R1PMlvL))aG5x7lxTCf2hQqzXGqWmBokYgHmMhi4CEQTUnWaS9jhOR(h8(7CSWDzDBRU9r5(gTlt5OMdwTI3((BB)Tz1s9M26g8PThLNTqfu0bJ1xcIpW6wxTjm)5uCbPiTXgfHEu)UYBf2NDfJm51UkR7A1NoRqIWSfRvrnRN)QwJNgnD7JDZbAX0QL3(HJpTC28Qn22CtlBRJqv2p1oTg25oq4PVgvV5a)wGPG7SSxQv2VVCDz)b2pL9An2f7)Mkkf2i2n)pSx6GvvUxRL2BJkmVGbefkfqdoLQIwR1w4UQSWyZgMxHAly42QTGDUkfS9Al4bRxbP5tlH7QYc2D9BXoQQRdS6Twh(lpGZQdEOaI)uV2SZkBtP1On7SDVc1)99p804ppt)33)X3d)5VOUTCxvo)XrWH6QYFt1HfUvwhjTUj9mgM2QIelrPlkMTTPTZLFwaMVt2d8ynXcCNlgxvwbfd6eQNExkUSLUsOj1Tb)j9I5zb93Edx)MzJ2s8E9caFmTQ8)U65mb45rkFKRhiAteGDkGJysn2jaDfG8kDmRiS7xATC(d0avMaKtgG9qOoU2zxxa2dxrYlsTtwdBKL(6yAWC8Ouoz6U44N8KhTZJFOC6hAeMctLL56W8o0yzHcVjw8KEcf2m7DIM0hRq)JeFGtnYWjImiP77b3iPuOjyJ4Yw(287MKukKPuTSsnsw57K7ppoLltATexeBv4HmJQb4jl9yAMNDeJKlv1hbkf8p424SGlTLqxoJHTYWG)Nf83DjxsoEVpjUn5NwlRT3JqpCOrfYHdThQn2l5bYfCLovYf8R918W)5C)UZ3yjPnLSK01SmFq41myZUGTkMqrWZgW0usAZyL2zjP3Kp6y3LKEZwn6xQkvxuskyjPRRK01JJtAK7xmYTnS(us6gsksghqaF68guAwclBmB1kUraufINVjuYkiEgfXAvLKxqLSqYlk3fK5kemJcFbnYGUzuZmQD(ZNK90jrr4O0xqb9NBwHs7QL)csDxH8xq7li8fK)cAJRs(7jy)IKciF)TY(5SLlBoeRgvWiy9ayILkNN4rPKHQjqPJa4AquCL6ffa(ssBGKgJJYo6g1btYJNjYXsTNz69qMNAw23vdn55YJFLxh8lCepouQfUxf3Ha3d4caIK477boqyfbqGTyamuGZl1hWljafikaaza0RK01sybFXG(GYssBH3wnWrGj((LK2AsSlkj1iQHL6aQvGo5M8AzIidbQwjldYkjDJLK22LaA9usRhOfaaRaAbGhaAjIutGUqGwz4fa(E6KxAOfhrbqlogRUqRJudaRwOfaioamvBsd36fSvasciO8bqiEX2CGzChDMJouKJ5JLeXAbORkrqVoPndvj3FG7XAhXHyBucfv2qjK5KHGGccDmDi((qjmTHDqRBbpJLq80Q6vGtOd8kHIaXYq(ZWjc68a38aFh3WDFnWmFlOZd0RIWdh6rbrRx6JgqekdpYM7aDZbZDWjd4E7Y10bDmTjeLXvJUg5JbD0bEVaNODx8eAhB0ZKy6JTN4hP8cF0GIKzSgEEWeA8dNt3vnhrT)J14giBkjMIPj8EpzTX2zu8ZWChSUkGu(rYcra5W29sdaVpuSZKx3YsvXZ5)vQmGS1kS0C8SDQVXwfwAImFa2xLnSalTlxlRZV(YzXbieXRObWRnvMvMZ(5Bu1mA3i2U7eTWu6VJJRN4eNA4P6aTNE5Zt4v)9vxT5pubhlz7POiV2MGRDtvTbVevG4ENaLvdv9zmBaSN8ILpCb)ys4wBeU4ceuNNOR9isY1c4HUsNGAZGjNWaWgWkCys59C6CzQif)vrCst7BAUuYIZpMI)iV2I0yKhW5daYdpkTHloiei4kvXbH8wypvG)44zrx4WI0CrhgIJUg34f4jmMIzSs)5ZV16KlDJYracdaJ1p8d6DQB1yZvsAFSNPiVxPeulGJWK6fESRNoSI82Q8usgEWXgAniXBITCsomCzATlAwvdfCZnCKE7fXHx(jEfHAlRAGrGEe88kjjg34tUjK2ar32isa2b5iXY5MgaZlq79o6kQX5ZVkzsF5DwKQr)ucNpSTy6oN3fwaTe(osXPYOrgjIYRROOAeF4yNiwCoqjbVMw7za88mNuoT6d1JSJlitmQS9dn(a7R8N23yyf8e7FaKYu50hx5K93BxdnuFGrwLqV7xQOPnoFjtfRTaDyIb6jYGtmWWWJJfdSexWd6gMc10ARzelrJuUILK248hmfyAypXSs8)oJesh4zMEXYqAH5x)33p7Jt)0)99R(pXF(VcyDJLpwWO(MRAfDWliaFbaeQ0kpw)A(fxGv9mJljT7MT2ADCvkSOljTNk0u55372jX4wMNft9GL4809sGh9Anm)D(fqIT74JIFq4DeKrfwgcWXzJZbWu6uJHOqRX5WLbwL8Qdrs(pcgAEPHdSKsL220Ac6Ky6SDRTuMSJVnVr0(4xV91L1LvdL3R8GDhSmSlIIceA(dDsv5PqPgopenRPhhsvrx(H4Vf)DhipoWpNkNogep3tXf9ohcHXaYMVqkpB54rhm2W9A1q5jGyius6Kaqo2rNv9bcFOb64KJTGtwzdxSoPgy4XgO3yiu)LHWUBSkCuF(ZLQo)75sBMJYRPgXpVJc0n0H2MKeMol7KZ00vZlornHIpGsVKuVZ5zOWx4NHVWZzsSPrMQI283lp1dF1LsyNhZlMlPoZ6MQgm2RTCgtdn5ZovjPHw4y6zZgcc41Dj(1Oz3oHgcmxxAmvBla6fAm0mFXE0WdQxMkyHi4jVspwmIDAzdv65fPwQhZC5e3Ke2pyHHZQEM2vpsBhcxSaRs8Qh0)SPWBvcs(9efgsheCgnlqMOzTLEvNgiMXRfWOzLZKxfE1jKZzb6qthkwUuqSYQAlq1OVSYZQz1Wyuo)cHhF99eAuimwTL9RqcZ8P10kWlc6yrRWagq09uSoAyQwoUgMKIhCJSFK12R94bgXr3CCLoZFM1Hsvu)MiHmcLQj4xDf2VLsiZXkj9wbtOOaij9msFJeA6oH8HZHqXEo0(IbG8crPca(OSBi5q8CAgYci(CCXsMpRsO0WI1(dgCa3qu2d411pk(qENTqiukV3PX5T1pPz2SM0fVG6hN7juYQxWsE3HsUIvv8L1U3aVd7GKL3atcdQHnDv5d(AlpmSHrHr2zdLsnKSLvwDac5AcVcQaDuj3nuryLXXLQfvuk9ToH0bORbn(tN3gJhxudOdtaVuud5SoMH0nsNnVc0dHOdwH3cQ28bl0oqhiYQm09uFCwnvyTk00YzH4G5Tlwkh1SGjJQY(XKP9pTrmuarimy0mRHavWQTIqRG4i(vS)nm1A1KwnmPyqOrys1aNYP2jMcnmjEy20MmjgOZVHspF7(Pu7AyP3MNxwWtx3fv1o2b74i9E6i5hdtFhLiX7UsXSx2PyyFKS3Fqjjly2EnRvA14Px4AgmSNLGFgccHgdfPCJbi8mPvsksdaLtGmKftjP3CnzyyRHbKClD0g6efk1sGCqyl0HNqUL45cBiDh8yDiJnOMu4s9KfasaNjywErSp53RXEWd4rdFrSzKt7og)6mQ5DDZGH8IOslYwqxXP54T3v43AB0yCpjlcJKrezoRX71gSIgbWlu4AOIJ4QWkHi9fXRB6lquJNhZdZ69cltN30easCc(127N)l2mbAA69MKwOMwvtpDwGCYZjzROtY)1KGp0l6fYOkgjiW1Z(x04GpRg9pkl)Moz58pGOVFujPZ5f1eL37sssx(5oGlX7uQw5NYnXj3BoBkTg)KKSx(Wyyy)MssVRYXFLHFVb8aTCxAIyMrM1(UiErjMGU9R01NCHXhEGe9fpYqXOBtb9o2fSvmNGUIf09Xyc(9CnkUXtb8nDjPp8suLgl2GX6jXiXxwduipbiiIQMJwjPpwjPpEHYDMvJ(uW3ZG6tQgkHSvjPfIpQ(mQzlaDhegMJCgvOMFuVu2bbhUoSmEEFld)SnxTDbM4ThPkRbn)02IMdOb1V5PkNYTh13EyOssNFrUrqekRSE2aLKEpAiMTK0Jb)9jGI(E9pGaCaaEQalJssZ349sD)JdL69Rj6IgQiREICl8pRrN77FJgoOoEjPrGVpOK)qEZsuhBLCXkfO2ClV12S2wLVPIdv(TFyFJfRgfhsp)M7nOzg90ByDzbvs6duLvtjPNuyfaMiLK(GKvrngpLK(q1yoa4qHXaSNs2gVKx0vRfuwdXXnwruoNEQ9mZHchDKoICgevtWzaiws6Jaaj2fqGdh2rau8dFcXlOs9uqPkj9Plj90WB)KLK(uiu(YwNos67BAxnqT27BdnLxJrRWIQ6bmoaRCaJta2omQYlWJ3SiZDva2jOF1O9HQcTxXDnGJGjGohuF(ssZrkT46QQfSka)Rd0kD3Hkj9mnt5R(Z2mMJ66ZD)6jlARl46k529aUeqELWv0wyfK3ardq30DX7VT2YN3u5(p4awRf2DOkOH9b7iOfjXa7H6XVvr00LHnvtWHB6)6HQ8Of4hBa)SfkjP7Vh8i80Cwhp(7GCTX9ZRGzHwJ8fMwdLIHe30wnEIbikQHgdJDZs87XcekmEr)0eN6aHzOrenA2AsHt(L9pHUEGaZGinixMCTEXrhQ2Qkjz7EPiKBLqJ7GXMuKtsXDaT7QMo0CNgLIlaNgo58Qa65H9(z)1ngMpdFrb48IR4I2ad5)2MXZ1hPQTsMsCFEW3G34MFws2FxZ(3iibATK0NZ6OtshkNPXEe)NOyVbdb)yRcHGc6K5V7bB)HjrVEL5bd)WHmT9)2oE49geIb(nwW)DsG)Y5995tUgP99Rjr5fUCEFbtMx0M))EbaO)ZFbWM5fs(gdLFoTvAcvz(If2eDxuBG2MA4j3ZXutplzprMrOvdys9tQ4WA0fodaJn0eYpuDKSTN7Sv2V)GSBoa7pSi))bn87sd71K8Vti9FFp6wOF8Ubdq5bdV)G1wkFpQe3GmQwnbfRZ)40Gmp5nN0HqhhxDfOxf38feN)l84P9eICOFRWofaFpkA8H0ZNwqnJOEYYDI0OHvJTXUf7(JeFO(gFqqrssK62ARvuap50TC4dZVtzS9W58FCnCSURGOL6qLlFssXciOji)Ot8KSCbb7Zfsw7bsYh6xpNGbM2Fz)5GV5tjPNBvfBWbWZVtm51FIO3rh73Yk0kYtn82QU0HugQfjR(jKSAD1RqL396KIKAxNoiCTDapV3w32QxYkUFxF6a15kKJf0)w39(438uR7A1BVvEbRQmJ74XO(is1P(DSg1NFYa1zS1rLJTNcpD29XpSG6mH7Oot4)VxA4PRvAOU84DLWmUC2P6ZtAOxoKU8v4vMwPK03C9qMus6fQK9Ok9H7Fnir8fi6N3RVpNpbfCvnHYAQ1Rc(KP84ts9QRdt4PwHjSx1(DLJ0bjIGc((skiJ8I3biwWqGI3z7D0vxLpnzIKb1sElLK(wveCLhNg1uudGfa7MQYTVxut7rCbFG(yE6(0GbB9xsdHpdqqLKZ0KIRfaDw)a)X4SUcF1v57UJQ8D3z1(UD1UYgVuo6sliSlEDJcll)KyFjZkXPZwJp2P4wzCVSugVgC0tFItgFWrCM2fnRatnWz3lUHvKuJRmP8Qob2ZH)CZbpWB2Ae9Yno8W)V6FVNU3ssfa80xqZpY7ku42ibT(IAuRlK1c1KUPay)JIljpIFjOiplaq52jOXuvJGTcV4ROXhAFvGDLUy219M88iAIUM6i)Rtw5BkuLnBz12BLFtE4xerYf7IxcxSvGpFXssp)BWc9UmjWZwlbU2yHnoEMtjVNJmW)pLaF9eGV)LbR6q2o(ZUk3gSss5wvWBLHSXHUCqAfqio6fbNEyxEV5J9iyvRbxdOBUAHUeHmI0(cA1b6sgnCKB5BxMpU1ZImxvaxVX06e6(gycbUcG3xZKd0rxArse)CZMx3DTa)5Uujh41lU9vUua2C18)v41jtRXAY0EOxTA46xrRoGvow6lkiIryk2HuB5N(aou9cjfi1NvKnaJkZgaXiBj6xbb5LMPfgI1LP14YNP9YMDALW1FiaxrS53kjcfhG)yzyAbEsuYsxEfoKLWNRaZkW5R6rsu(grYdL2dRkc7UAWQHaS6jj4uDFQUZE8tipEeneYcqF6(CDLIQDvtkw1Nh2J9VV6jfZC9KuSAehut6V4i2kZ5f0HvNZRvb0AwjO1JGLd85jS6kCorVcqbUUZTZaHJpBFrh2ulJ8AMBhZ1xUDEDWf240x976)9
+```
+
+---
+
+# 🔮 Shadow Priest Rotation
+This section outlines the WeakAuras (WA) string and documentation for the single-target, calculated rotation tool for Shadow Priests in WotLK for PvP / PvE.
+
+## 🔑 Design Philosophy & Core Automation
+This WA is built on the premise of **preemptive sequencing** and **dynamic gear-based optimization**, moving beyond simple DoT tracking to identify peak burst windows.
+
+1. Max Power Indicator (Burst Window)
+A highly visible, glowing icon acts as the "Go Signal," indicating the precise moment for maximum damage output. This state is contingent on three high-value buffs/procs simultaneously being active:
+    - BiS Trinket 1: **Dislodged Foreign Object** or customizable alternative.
+    - BiS Trinket 2: **Charred Twilight Scale**.
+    - Full **Shadow Weaving buff stack**.
+2. Gear & Talent Optimization
+    - **BiS PvE Logic:** The WA excludes **Mind Blast** from the rotation sequence when the user is equipped with BiS PvE shoulders, reflecting the most optimal, dps-efficient spell priority for end-game gear.
+    - **Configurable BiS:** The system allows users to input the name of their specific PvE shoulder item directly into the WA for precise, personalized optimization.
+    - **Trinket Flexibility:** Users can easily configure the "Max Power" tracking to monitor the buff from **Phylactery of the Nameless Lich** instead of the Dislodged Foreign Object.
+3. Range & State Tracking
+    - **Range Verification:** All tracked spells display a red overlay while out of casting range.
+    - **Mandatory Buffs:** Visual cues track Inner Fire and Vampiric Embrace status.
+    - **Shadowform Check:** A visible icon confirms Shadowform is active while in combat.
+
+## ⚠️ Design Limitation: Single-Target Only
+This WA is strictly optimized for **single-target** encounters (Boss Fights and Arena PvP). It does not contain logic for AoE (Area of Effect) trash pulls or multi-dotting sequences.
+
+## 📺 Demonstration
+
+https://github.com/user-attachments/assets/b40e490e-3567-438d-9c61-5813c7963691
+
+### 📸 Annotated WA Layout
+
+![SPriest rotation details](https://github.com/user-attachments/assets/e553ee28-413a-4a72-b44b-cd1f8145bffb)
+
+## ⚙️ Utility Macros
+These highly efficient macros are recommended for rapid buff application, especially following resurrection or during pre-pull staging.
+
+1. **Macro Solo / Refresh**
+    - This macro sequences key buffs and ensures the correct stance.
+    - **No Mod:** Casts !Shadowform.
+    - **ALT Mod:**	Casts Inner Fire, then Vampiric Embrace, and ensures !Shadowform is active.
+
+```Macro
+#showtooltip
+/use [nomod]!Shadowform
+/castsequence [mod:alt]reset=5 Inner Fire,Vampiric Embrace,!Shadowform
+```
+
+2. **Macro Solo/Target Macro**
+
+    - Casts all long-term self-buffs and ensures you are in Shadowform (Power Word: Fortitude, Divine Spirit, Shadow Protection, Inner Fire, Vampiric Embrace, Shadowform)
+    - The macro resets after 10 seconds or on target change, so you can buff a specific friendly target.
+
+```Macro
+#showtooltip
+/castsequence reset=10/target Power Word: Fortitude,Divine Spirit,Shadow Protection,Inner Fire,Vampiric Embrace,!Shadowform
+```
+
+3. **Macro Full Raid Buffs (Consumes Reagents)**
+
+```Macro
+#showtooltip
+/castsequence reset=10 Prayer of Fortitude,Prayer of Spirit,Prayer of Shadow Protection,Inner Fire,Vampiric Embrace,!Shadowform
+```
+
+## 📥 WA Import String
+
+Copy the entire block below and paste it into the WeakAuras `/wa` import screen:
+
+```lua
+!WA:2!9QvA0XT11zdnwEzKBIeLfTeLImSCeRKSnnxefTuSCdhQHIuMBgZqjVMbyaECaSWaabGHKJIJBmRTIA6oBJtB6w60w7UyhxpDlnjUoHPT2Un9CUh(d7XBDHNttBAs3uBLDQBwU33dygUjz5TOFmCaWdV399UF3VV79os6OnfuT726S926rofluRPInz0KXPLNpVM(Xn8D96Z121)ijsKySeT3w3EnP76e67ABZm6Z0Y2WN5SN5gZ3IfekNV0eteSq0fzm1mCNsEH8U(gm)urZM36tzBDYtQ5BiN111o0YRsOR(Km)alxNlBY7wjqxZMLy2aM9eJ5A5eMVV0JKnTsEX0ywr830gfyEBiZjkP5ZK7VKTT8XmTczv8zfW5jBzpMsbF3sErdpJ1jzR1B9bM4Wn63xRiBi2KmBZQIhl2IsssjMxRuOPR)OEH40eK0V8O4oIf(C(A687SpLGqn)WK5NWYXkWmzk8pHjNj03QqbCp0sR(rF9uvmy0Xbzk(dKEOX6F8Hsfs2LwjFToNjWJzBpOrqYfckLhTfNWm4OTMUAU(6nt2CzY2Rs2uLWjpVNTwzMVIdA0bjv4dn)amn7qZ6V6y(m8vvYmw6HgA2sorMqYQAo64MHFmcR7m4NmFhn7JkoSFC)PfBoPz1CSkQr7V9bxv)ZX0cyzcr)AHqZlf2Ekhxh28gOvtJihTh8dyikWiygAO0oeApvrnlN(HBeFbODOdOtOl8VBE53zhwg5f4J5eh9ct4Yv0S9m1sCgHfZ9q08MptFkPtps1jOBG2KwOwI84spHvHKr(UbDW3prf8OqH77ds2zjlJQ3K3HvMEI7S723B6kKTAjCOPSD1m6pFiIXCcBwPyjebMmf6m0Bg6lPIUTwqa9TubiIH(svlNjC9fNonxf)QolnDKhO2K(lD6UNvZxFi(j1d2mK4alOW8S5idwrCqERpki4ymTjTCki3vLH1Mw2qROwbgCjWLM3dbKOZPByt32zcC9dhOCEFlJSA5TzTc3QjCeZktGO7(S81TzQkbEA6S1cnJ(PKWMtcBjj0slTcB9uW2GpaEoF1GCs4AGDaxl8bHDMeAf(HHDb7g2tYQ6U2Lk6KHMGe591mSkf8Gxb0g5XxUxBVV5(r0FzvWbwhCLj9XiccUjbhmjKm1qP7plSrEWe0B)qk6qeoe)Z08p7N)5bsaRPoPYm(UtjSmFbuKPcFOKWLNOIoJaTeuyhdPaxHj8dbVVzdczE96uWMD1WgwBk6ydXFy4(ukkdE4bYc3s1tmGcRpJB9yMbdb9KqX2QOv46waXbOT6e2pgm76NxP3dn44zMPaDGtlGYHG9D5W1)4WLH8qiqfUy49pNrzmWZsNtMmln0JzzeAUo4MG9NpWTechYBv0JmHBobCdsW1bRBMsbSHOv0e(WjHd3mmGkUbd5qiPtVRkwODKH)QB7IGHHlUQMX9wc3tgi2ynnUWYznWM4t4C6itjcJCiwp1iV)w4aGwgb9(N(QMTefYIuSbMZs8lCYIwMNqJmcnsGr88Xzuh7YQe4iFaF0n1nIlkM3YHnSRbRsGP7ud5ofgDs4j(L9zJr)bM(4cmcoPMNb)sob1wFuWI5C06XzZSmcArP7E23(2)cIzFuKPqdpPB6M5qtemsVD6PXJ)mc6p1QOZw3mNUlYA1u3eKvaG924IEqJ5zE(DzbzqlBuN5c4)PxKAEsgHZZJtVcROjH3nScU3so8h1PMTT3g04FpRGBK2Up2fHo7ZCCgcMicGqfYdzgfsqyDeYVOqILDNnV87Ge(bAHenjZeo4bAg2(8iPePIsGhhJtFvEnfYMomxaNt42JiF92c)M8pemn5cI(c0(S1F2o2zG36x0R3qYAbXDJ1lt174zh1BJ8BIIzUe1Loh0MQx8YZiwiRPzcK8dmVGY9oImN54pNGGwtugJV3UpUjO7vH)a94KbsmBKftSC97BDs5BRKMbrqlNn7QSN8I(IsOvrMXsojIxAVDVkVfn8CrbH5cn9rSigluEE(OMcvaoMVM3mhl6lcRFsRalKav17AoxtONpt3Iebt4T9Z1yexjnN48jNhD46THbhzK0k5snA2SJomNTz(6NdusgBj64m2724P8ebgD8Sdn4iP)6ZxW2DQ(9zNOeZrV8yxC7T1z3IJA6bZrFCOib3eZqxrV985lfg66mkMSeMsqf62cPNnvL(E8X4S0f1tAlXCymXHJVJj)Hz4PyXTHSMw6hhdWdsWNJyZofDHyWdHKdbBGVAPePGL3KzvWm8GqVpcX7KZbZbX3uW0xLUXKmCwTXOaoTpFmCHvvo5bMMwrCJB5XWW)fDrlx2FXRuHpwKrslufs3A(alIMp)ykdMot26IhERhhwVr8KCAttWayl)2woMW7pfX2UGNVBbe6eiOD3Z2UO1mtmNQk8uQi5qJ8ogJljBQ0aQJICPoPRBrjsukwC4iOWcQIPmfffDqspa1D2TDXY90Lrhgd0UVLdLvlEkGQcF4wAvb5T0pE)WwtSdxVDCWdoZKA(wKop4PmPMDjwtD7RBQ5uajUBEg0Gr4syzOhHacKew3P3fykumaR1a3BS6aCCtCleRea2MqXwwyP5Da3hNlVx7P0khqKSEix7jaFEwdbMC25sM1tCWvLN4WKTO0r3D2DpWjXrpnsIJuZOB5JIFdfrO0kUFIPf(rHpo8aCYuygZ32zua)yrSMWdI7IF5eWPW79jqAp40IKj(XHpj8ta)KWp1da)0sWpdXnb)SWpNWdnl8Zd)cWNcEyj4Zkb)IWVe8BavGpJk8Rib)QWVg8RVf4txgEiPVo8BghTb)wWVDc4rGhf(D2e87kb)EIz6ZjbpEc4Xsa)(MWtyc)bBaEstOkb2H)Wiqo8hzIGt4pd(c0f)XQWFIk8NsWx4ZRgLQJijNVihxcFjehcpf8Nt4Ui35vMe(YMljpUVIy5NtcHr7BxMD23De2tV3HFD82TkWBCG2x9Ges8V0Kqfe2c(RAGRGNf9wpd4bpxlnd)1i(5Pjeye2bHIlh6SKSjUFed9iKtUylNj7uw2uCUC)2u2eCibHoIYWK8)isIGoekApjj4xtGn9UZNPKFbkF3XWKj8H7d(yXGU40uNEh3YbjawpDSV92fLWuwmbje6slcn74IqlaIZc55RiGA4smj)1P7qOCCzyYUteTo4qlBgpR7DrM1vjml4VHG208sMYjJmNi8)00z3hL(yNCyUica(BjBGcvI22yycTDQBsRk6)TEYdVRH(ruoH(rK)djTiWpguGbeV5OFe0Jq)hNhg8eQlc9)WNh0V5fcU)P5SuFzbML4WMBj0PdfbV)QXuPD7w6MoIT2rgkZDsiDmGjoz6OqLt)HG7cUBiXNSIGSJ0Rx4OAf9S8T0LZ6ws3ScQbyiNc1EWKuoeBsK9NJkT1kuIAFqejjkRDa5XW6xNLp((j11bDCy(Y9B5JYk1N00fXkN0fvUnLwb3bp0SJyZorhSd3EpKfgfvn2AJla6Oj6SKVT3wmdd9coWnEJ0l1ML7nokM7X4g7T0jUakLlkqlo8dHC3wccTLeghYGR2OQcHprT(m)XDWkpsHjJQpT0tG67bKkWX7LYsxMubcKdnzYoyEjY802Xl1cL1KfjJj7j6EdoYs2gY64rxBjtoyOmw8nMsp)D9zuX(0jzCxbK1WZTyfvkGKg2eU2ysd0W4RtWbKvxQ7r96LvxHpGU5YDv49OfqTH7ufnQrCdzcJF5JhnB0kWADKZZK18WsYzgYHU4TWxqd5mcVE8fXtMGq(BXhkxFoq2keVKB)6L8PmbIEdCbZI3m6n0SdCLTC0TlzGRGSpPBlMbMVWyX5bxaSkeE)BmeRXuMm8Ssg17TmIMxAuyY7y9hmJ2Gcs(r9cBTu50JCkOMj8IMWRAcVGj8sMWlBcpVj8kMqwjQ86(xr51Iy0BEXLx)2xtMIIVLQ30Tp8DouHYfoY(lI1Kd3EJsXH7GkbhUtCO6Rdd2ZtHWhtfYbQymE3y905dyfXDKshT1EBDupAFTWhztuapfQR8Gxbrem4d2mjpPrLHxpsFc1tFdCHR)o4VNcWwHYv)NHsmnhV)q8wtn74Jmy2(v6D408Sx53dEuFd3C8uA5z5Mt0mVuu0aS5jHVL5cMwgSCyzI8rHkc)BW)o8nMNppzspu6(YoQc8nvgdlBYUcoxOEyGwbMzLgRUxt1dZoWqwtWKZQ5XdQ)iyq9zHTRWdc4b3yu98fyi)ILUOqw4R5TbkZ3LCtucYBl9fhtnwugSY7Ix68UjAbEY20MOGUH688lONr1PRIShZ7Z0SZeFh45JAkepFCE0S6S1h)LDZNiwcVtm8EhD1oPx(8W9nVOg7HTcOCX5tXstASSq0ENjJ1TdvRIZWIQ9xKh5(B)9Kug)NW4Kw46MCzQtHcs8IieD4Zmw1Q5NjwH6ZRwx9Qz4lOUuflHuvKU1ttLgq5lDdCLku6kkhnuJAoPuuX1Q1r0p)Isp7Fg(xWOMJoEPU7D4BYPJPkscy)dW)igsSwo2UveB7TzRcoU(SOwnZBQyAFFx)arY(NFCFDjJph5Z2a8AQWzHVg)e(BRgPG8)Y9iTcVo3R9gWla)FeSaDvCGdwSbY)ey61K48IiJuOAX8XcZG)Fv47CzFj5iqXwRWrk9XBtt7W3DhDWXhVGxt11cY52WJtMY1MxmLZwFe0l9AIPTM0LycBZFGEvgU)XhYB9r2sJ54w4WR7d(EiCAH6iB(6RwT(1dAOY3FZBgV9Cv9JMRMAVM0fTJB(G84I62GQ3gBmtlE5IZV8uW9RcF3M6KV(0wuml80qRjLe2wnPRGJGZRJ1z6w0RjXFJ6R0qUfS09oYe8op56SROwXV7KY4)8zHL8rTfX9URoUhUqr8yURoVhzx)6pTR7z3jzogllm5OC8FxrXa34LM3djfyHvZJ7hD2Hy6ALFRe5ShrgNxnLX5Ni1o7Qnpp5v0pKoBBPDeHsRmkRumBZgjM6DTN7xTrdxIsFDvgCxRCWRI101YSgVTUQRAuh0(u88IXuL9UUZ9mTY2lT4eRPcjFyPv597888(ICWxfBRRfBBpeLF(6e5N71652aTzf00lNBcBxxFvop3KuI3n42QjTgZLsRTkPJ)wGCRMuIguBVWkO2cgyKID07W3M9jMAjuB7bReDFyLOWZmNi(0rHsmcEwjSA0wHN9ijKg4h5JVE()sGfN(veJh55EgV1RfsnnM6iIG4q8wIAy5mM1Kw7BjQXiHxKhms0foBvHAMctd9rVMG8avUEdOwe343wuFiryYza)IFVigWTX7DLO9ZgkLCyMCAO6n55SliM6ybBQM2C0VFNkoN1KwhYOStEnTC(iuCYN3rqtIjSQGcrKRsRXS31K2GkzJOHxt69Hd8s52B8GPmwqiudtNm2zItihxoXEOM0Lt0xeJvNAoLFVr19r8fYTDIiWNebGpP6k0D5i06Tk552(7oIWlbNwBf40rDvgC3JBpUxNPoh40Asx7fc6SM0h8DmCKRuV(6AZe0lU8Ui1BYJHaqU7K7U5qZxmsl(XIqIBIlpHstVi1ndCiNevK5YsyMdKQfVjgyAzC9Q4gQmjVPgYjjX0HB8tRG7IlcfSjH26zNrlYoRViZhsDMjoDoeljquCiDv(plw0VEt7cJmWuH)gKApAeZtPh(60QE4gJ1CHOF1P4YvHZwtAxcdMmwQFlK5qDAHVZojPMVHOThQwVt88PdE0bEeqhrIqGjtkuR924ImS6M(b5Q4O8ofmutAJ1KUYAsB6DXiILOMwtAZ1K22Ifl)SslsSSM0wJLcRj1scsMQM0hG(ylsKEvnPREjQqFgvueQM02lh3CZAsYlrb5txUM018dEXHxCfbDDUFLE7ESuPDZ037HbDTvpOB590KwWlKapmYzPzn3iUtKV8lfjb8DeXeNLk6H3Au8jiSJIzI)91RJCrqyzEqjw0ZE7ORU7w0GursJIoKgfy9sXTfve6YN6YXTDSM0(5ZBuBGOPpkpuArCp3OyHBKAX2kzPF7alqyacgIGfVJDHrOiesricewrOME4n9MWoXyQxIJWendePuVLQhY8OJ03e7p)XcgKGuVTJtpUz1OgYmOURJ31ni9FUGj00z3nDDWDZlwoNOLur)HAmf1wQfb)MXCrOVZlLp)NKPzfEX24EQMuROm(n0uhlMThjn3QqU)s4A8KwVOFFVohc8gWllqM(LC4)N9bNOO0ci8jVj3nt8N7mUQ6k82PZ))wLjrRD(qdQlbne1hPZPYmgN1an8uXnIL7mrFkf4f5tpWk8PVm3N2d3NEd0VXX9ME3DC07n7O7tZ6DKpvG4FxKD56F83SEobFd4Ff(MWJcFlrJI4Tqc(pI6Ae8FIp7)coJj8Fd)p1teLc8J6QYRWPoUG6KIqDM4dKwI(SOjXiJH4314vI(fmq(b6x2iQnXi7qBV3KV3YysIajRKlHdQEhkW8kRqGPK1ElnQzXdF0(p6Q1yLlW8YEl7fhzPEXx9C5fvVW8I)GZ98EQ()RUc3Zab3XXSpEqN9zp25Z900Kx8h77p
+```
+
+---
+
+# 🩸 Blood Death Knight Tank Rotation
+
+This section covers the WeakAuras string and documentation for the efficient, single-target tank rotation tool designed exclusively for Blood Death Knights in WotLK PvE.
+
+## 🔑 Design Philosophy & Threat Management
+This WA prioritizes high threat generation, impeccable buff uptime, and the efficient management of both Runes and Runic Power, allowing the tank to focus on positioning and defensive cooldowns.
+
+1. Proactive Threat & DoT Management
+    - **Pestilence Preemption:** Calculates and cues the player to apply **Pestilence 5 seconds before primary DoTs fade**. This ensures maximum uptime on AoE DoTs and sustained threat on multiple targets without dropping your debuffs.
+    - **DoT Tracking:** Clear visual indicators display missing or soon-to-expire DoTs required for maintaining optimal threat.
+    - **Melee Swing Timer:** Includes a dedicated **melee weapon swing timer indicator** for coordinating abilities like Rune Strike with auto-attacks.
+
+2. Resource & Buff Optimization
+    - **Runic Power Dump:** Intelligently tracks Runic Power and suggests using **Death Coil** when Runic Power is high and **Rune Strike** is insufficient to prevent capping.
+    - **Mandatory Buff Uptime:** Provides clear tracking for critical buffs that must be maintained:
+        - **Horn of Winter:** Indicator for full uptime.
+        - **Frost Presence:** Confirms the tank is in the correct presence for threat and mitigation.
+     - **Consumable Tracking:** Displays a prominent reminder when the required the tanking potion, **Flask of Stoneblood**, fades out.
+
+## ⚠️ Design Limitation: Single-Target Only
+This WA is strictly optimized for single-target boss encounters. The logic is focused on maximizing threat and resource management against a primary target and does not include complex AoE rotation guidance for trash pulls.
+
+## ⚙️ Modularity and Configuration
+  - **Fully Modular:** Everything is designed to be **modular and easy to configure** via the WeakAuras interface.
+  - **Customization:** You can easily adjust the visual elements, timing cues, and link your preferred tanking potions or specific raid buffs within the WA settings.
+
+## 📺 Demonstration
+
+https://github.com/user-attachments/assets/68abb5ad-2411-4f4e-befd-b68e11792d28
+
+### 📸 WA Layout
+
+![Blood DK Tank rotation](https://github.com/user-attachments/assets/e259629e-ee39-4b8a-b560-0c8a8fa64fea)
+
+## 📥 WA Import String
+
+Copy the entire block below and paste it into the s `/wa` import screen:
+
+```lua
+!WA:2!LJ1AqYXv1zVAqyXaLJ0i0I8IX0wqPYRT8QDh9YYLLn7S7SAx59L7zwTYMOS9R7oDRTNUBD7U3xabZAJqqIdKnogeXyGnjkGbNuEumYoobtTMhXuvQCyXjyhc8J9hqv8tvf8x4CU3UNz2rwgHWPQuf6hA75o375E7Z3JZ5oTD8CH1oqx57URdPuGfPNRAoRCwN9WlRZnhM5vjY(rAFDdFUfJxq3CglUFqWwl46S4I6ClLY((UrobgZPxXFO(xEux2P7HD0Up0A6Xr2(8XcIC89cZYxySPNoKf9YlvH7yvEHa2Uu7F5qM70J774fvy4IduELPJDD7ZHB6Y0wI7pxPaDtwM8XC3GB0okki8U27EPTPlh)9owOJ)ew7p(0CDtXoCq1WiDEu2coEorznMg)tOD2LI4ovQW4HDSBEYJNzflMr80ttNb(GfhE8bMy4cr4hu1J565xkmG56oKvy21dJnyZY8IkHZ2z(At1xVLkpvPY9QwUqmUjgbU6lW41N24Cgon1sJxC4HvfJymit3nYw1tVklm7YXEjhHS1m9DJR6jFbVe((Z4E6UhhpN4RYtVuCiByNQorAQ6Uov8m6R4OLlQEPqFE0Glyq5pDdx25xFaUFyKcUVHmptMDqUbC1dNrXFALiBMYO40TTxEiZfqqk2eFSGRVpIy6b2RmolmYXvSS1h0N7rlAsXbXEv50kHh2zy2RnURELyw6hxTFMEKD6Nwr(P(8DCTlyXcnNVT)PY2oHktY0NPxmDgQeA7pxO484XMpsrKDXpQhPOJFNUL)CkbCh80qZm21sXupmQRSzhksjcX2zKRLZQQJiQxfflmQeGRO7HZfjFye8sFLN2311FoAAI9j8Uu0oUE1ahUJPmhOThfTsYDDsKrFxkJJHLgSF2S(XCALY3xCmAd0gXb))cyAnsdpuJ6hXKh(wNpESXtHN7ckgmf9GaxhMLsKpoeUaDEfw0EWfIzMWiXQet10MrVGor4hfNFZyoh5njRa3WY4GjRq3n0xXXZ0n2c3bfUUxfMmcmU8WIXb3alNqbX0sUhZzZWCLYSitYkjU0SqLhZmIz1fk0Iej024Zk5FBEfKrRYQi0TgCDlN4Wh5DOgsK1nJCdDRbmI0rUtu7QvJrXF2cy22SD4EYQAIzQq6PcHolYOhww3ZPQydoiSTbGDwWdtjRY0dzihs4UC9RLIPtrYqEiZ03ZkCjAoKif6Rab(4AH(G(VEOimaCu8XT36iRzKyp1NVRp)yzYKz8mD31bQj9UgYdTFYWLhhMwnDpt0Fs4(aDQgAIVrzwXKrsaH90WQgYfAVI8VfTQWc2wPthRZzkdGwvktA7eXwomIf0Rxfx27nzILWx9nR6sk4DScxKiPiUQ1cOrGJzfUFCaQSdS1ZyeISitMHt1auTUm5noPJvK9BFDmhGgAErdG(B(Cd1E7FOjkLp2XQwNrtoGXWhpYDrJvLBO0A9TzeYQIyOApD1Dx9SsKVzcGULz)J3LJfV)7dL(EZuGSrG(QnnhDLqmqpspZLKjJbOHOJQrP(ulwC0GTIor9kZtm(eONNTbEUM2Ps2c4BXCQQdD0blZNxU)TLKOLz)2ARnmDIaPJSaqnhVP95sMq71WhnzfjpYqno(EsUITLZ8Po7EwXbxujrw5MUoyZWBv1mfnZut36uXy62Ae953uJp44TjylTbddDc3a8hvGcGg8ohD3WooBU8OZXU2x3ltE7cB4oGBFn8uGcNWsO10yERfk(ZioHHOmdEVGc0o8UwHgTpxKRgAZXSWO4A1Ue(WuYQh9reDBAGIZJiujzrdB4wGDTkTxc)hhRWou75a5pC3W7ll0rwKVEJ1Wd0yilxhr1C3n8EGBgE3WnzGbsLv1gE)zRHc4tf7Hv1MLLx3BHGTPlEUSS2Xi(wSV(1b7(PxpG7xbT(dLjRB7MUUnbfeAmurqcJuDYGx2iBV1rWsIH6rKkKzd35MHd3r7WoxdTbiffXx9SmSzovSJocC3p(YuAWdRWXTHJGA827rRgn0SmBhS2Tn8b2TbLlDz16VyVLh8(gLOjW9SB4r1mgxDOILkRTcTaPlITiEcNd5WM(vn0J0G7L8pGEP)xYetaCb(BdNaEGwh2XZgMaMDP06cARM(ejETHRpl4KftOny7JRtgU2GgORohP8osHf99R2wbS9fFnWqQDGBhyzGjZatdva32GtwlS)5h9yd27OgODHJhj0WWVvk9FPkyjOPeQlHF2Ytm6qLhqT3rkUS4BOXwZiokY3BmCDOvn3YFk6RSRjMGSHMcebe2(SWxYEDBhl2u6UUIzfAdFzyf4jwteZsfhUyFLhtfEs1XDMN5UcglKLhQJVUR04KeKREf57AyNPzutaqUSqwuZ4Lf83neOfStSxdFolPLnH6SiN7Zd1U0mm0JJC5JujfS9z3dWLYtiuinHOnbX1LH)12WSOe8pribH5qbimFhq3WcWIPcm4dztYb4Jyd)Pczd8r7aEiHEafkFyn4JHQdu1GIdyjsxKgREsJ1QsHBVc1bn1KOIRTrqPLNetA3OGshaXETKggw4HHhb(4cffCMMerTuSzWF7LFGprdTdCw4tssf4tvxIa)z2jm6pTn8z0G)snuNa)5WJkfgWFHMKQdllO2WFLGklHg4RQrwBsQx8XmFq9Uh)ONk(eWJBdNttWk)CTrC46e2Uj2kYz)Shrs6H)Me6j8eWxaEs4lI8kbpcjbij7jG)o4VvoW)a8vWV)VhoVnnLecYJPbpvZGogZwb8x3OVXqJdMezAtWDUvgYEemecV2iwQvhlR7J2euQEWd1DphEJSer8c2E9gIlHYnMb1yRylAWw2ihK2ckGhi)boqt8qAFOtLylGhopQf3iNHstxo8FgcNr0EJKGwr9MS5sXEeNtGFrIpvJHW4JlSQsr8Z1WHApnaCKICNh9y9hpGXHclta)Ss2tQqNytxRvko7DCf5a0wqKGScofcU3mcg)myNQIAHuQDzXtuP0TS6VmyBKxFfMhAGAklfRT2g(OOgCVUZPVqiL9xJJ3MQuAeG7ynA91JOgbxiojQerlSIPLgHZ3sWn2x61egpPKPYTkItNcsGG08Rs5c4Xe7SXBmS3znbvHOfe(JHcjj4MmFh1Kx8AaQei8EmKDvt8M93Z(qEdsAANpyVQJG3SK4ljmLNY(nIMiX)xFMs7nOjiBkHJGsU6OPKSulP1)HWgG2ukN5K1oXGZm3ibbL7ECrTlKbrShKTSrc0DiiwsgK0VqsTrYJ3TTBvXnnoOkEpIywBlnRo3HUd6QYBl7Ps3gb2rgUPn9eEDB4LowM2g8EFOTk(xMLWUvWUEIwac3nS6bHDGKOVDWw1JIWomOiLKeFP2GVlMA(EWKe1)A1k(nGLMuA6Mfy(oHAWf2cUNjwl)ZKrZ)IaUFEn45eCQlc5j2xqozhl0PuLD6yhod5xpl8nAHdHG)8DKCfA5vdHx4kqKK1M(3OIrFtb3RD4f3iF5AvL(7Sxu7xbJiPEE7cj9JLYZi(aHHyE7BdFhe1riRv8grWMaA4FVzGLmkqg2BaxmFtCXtwZyIdTF(mvV)tD)pqdAzc9(BTPgQauDD11xY)ivLy7QIFFb4CeQt4iIliOFHT8D)8cEXlRjS8t5dxe2RKqSu6TvZ1JWSi2t8B9aNt0gRiMAsor7WZwt2JIkt3AbAt3fmxUdqv6(xf3LqErelvmg20X45TxU(V0rU8cdoSfzEeDNm7AMyBU(vNI6gunYPkZkDeQLs8GIhvH7x9(rF21LBFQ)N4f5)ixEbR7cB5f(10V00u0VLfDIFrXIrbmsXdfezmJ8YARx3MTp8EayRYVGwqU6NYP8tUlZUU7JioV1)gn4IR04xpjrmjkCJtffeFnzRDAjfTRNz((WpWg(FP5882WA4H9hAdVc8FjMnbg)i89cEv6S9)ydVMM49q8srQhuQrBb9EI43pwKuPx2)BCPxe(PjNcQQoTb)enX5iPpqdz2miN8Vj33Ay)koMbhBAXnY89U1KFcVoZQG)JZWln5PKm2hSNtk(DysNZhm)jv851)29DYoZY8S()SMnppxEFQ8OM(zqj9ZODL7(uW(CIyvjNSaMvlobxDnIo6I57Db1t5WloXvUr09EfAenTlbrdMs)e0iH8teof)U4NiBoTHLpE4E9Aon1hRjVFsMUrRFsY3K1)(tPsKbXf2YQ)CjB9mIvUtC2VMMAG)CmEh76GDVU4P6kIo219CeHNGyym8QJtpi2I))Llp6j(MT5EI7BIbpltR0I9t0Ljtm4TCgP8OlgD4oZxPHbpYwA1C)neItRQF2TrgijE6jWjwJ)Tia8utKlc7lbJtWxKb8FQ1Ou(3iTeGioVk5ZKSeAk3YA9kmduMiKADrSlIT41bwFtrAFT1HyZYSwAvKsTyc(K1MGnub1W(NHxDKFRy2(AGzn3GO4Qf)(rAESRc8Dds4BGa6TIj9N51srkcAtbEqc82jy87lBsj8UeGVeL)dCbyxnla73(etwPZfmD9331OaSXL)AYKvGqVu26kpeLUmPzliupnHqyeoFl6qAr0KEonzKVf4xC5W51YLXVsids8Etdzqu(Qay6PzGHF8(o(yp4eZENtm9veyUwzV5M9voXV5p
+```
+
+## 🐛 Known Issues & Support
+Please report any bugs or unexpected behavior using the **Issues** tab on the main repository page.
+
